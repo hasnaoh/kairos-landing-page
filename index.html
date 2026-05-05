@@ -651,7 +651,7 @@
   <section id="problem">
     <div class="container">
       <p class="label">The Problem</p>
-      <h2 class="reveal">THE MARKDOWN DEATH SPIRAL</h2>
+      <h2 class="reveal">MISPRICING IS A STRUCTRUAL LEAK.</h2>
       <div class="problem-body reveal">
         <p>
           Luxury resale is a market where an item's value is not fixed — it is a function of condition, provenance, timing, and the signals that surround it. When an item is listed at the wrong price, the market does not correct quietly. It cascades.
@@ -693,120 +693,55 @@
     <div class="container">
       <p class="label">The Kairos Insight</p>
       <blockquote class="insight-pull reveal">
-        COMPARABLE SALES TELL YOU WHAT AN ITEM SOLD FOR.<br>
-        THEY DO NOT TELL YOU WHETHER THIS IS THE RIGHT WEEK TO LIST IT.
+        PRICING AND TIMING ARE NOT SEPERATE DECISIONS. <br>
+        THEY ARE THE SAME DECISION.
       </blockquote>
 
       <div class="insight-body reveal">
         <p>
-          Most pricing tools in luxury resale are backward-looking. They compare an incoming item to what similar items cleared for, then surface a number. That is a necessary input. It is not a sufficient one.
+         Current approach: What is the maximum we can ask for this item? Then mark it down on a schedule.
         </p>
         <p>
-          Consumer search behavior for specific brands, categories, and aesthetics fluctuates. A piece listed during a period of declining search interest will clear at a lower price — or will not clear at all — compared to the same piece listed three weeks earlier when interest was building. The comp-based model misses this entirely.
+         Kairos approach: What price ensures this item sells within 30 days, given what we know right now?
         </p>
         <p>
-          Kairos adds a timing signal derived from real-time search trend data, lagged two weeks to match the consignment-to-listing lifecycle. The output is not just a price. It is a recommendation about when to act on that price.
-        </p>
+          One optimizes for initial listing value. The other optimizes for velocity and inventory turnover. The second one avoids markdowns, protects consignor trust, and keeps commission money in the business instead of on the shelf.
       </div>
-
-      <div class="signal-grid reveal">
-        <div class="signal-cell">
-          <div class="signal-label rising">Rising</div>
-          <p>Hold or stretch price. Demand is building. Early markdown is measurable value destruction.</p>
-        </div>
-        <div class="signal-cell">
-          <div class="signal-label flat">Flat</div>
-          <p>Price to model. Comp-based estimate is accurate. Standard listing strategy applies.</p>
-        </div>
-        <div class="signal-cell">
-          <div class="signal-indicator declining signal-label">Declining</div>
-          <p>Consider delay or immediate discount. Market is cooling. Full price increases markdown risk.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
   <!-- ── APPROACH ── -->
   <section id="approach">
     <div class="container">
       <p class="label">How It Works</p>
-      <h2 class="reveal">THREE STAGES. ONE OUTPUT.</h2>
       <div class="approach-steps reveal">
         <div class="step-cell">
-          <div class="step-num">01 — Input</div>
-          <h3>Describe the Item</h3>
-          <p>Submit a natural language description. Brand, condition, creative context, accessories. No rigid structured fields — the system reads what a merchandiser would actually write.</p>
+          <div class="step-num">INPUT</div>
+          <h3>Desribe</h3>
+          <p>Item decription from authenticators.</p>
         </div>
         <div class="step-cell">
-          <div class="step-num">02 — Analyze</div>
+          <div class="step-num">ANALYZE</div>
           <h3>Multi-Layer Intelligence</h3>
-          <p>A feature extraction layer structures the description. A regression model trained on historical resale transactions produces a price estimate with a quantile confidence range. A timing layer reads current market demand.</p>
+          <p>Features extracted. Run through pricing model and demand layer. Confidence calculated.</p>
         </div>
         <div class="step-cell">
           <div class="step-num">03 — Output</div>
           <h3>Price, Range, Signal, Rationale</h3>
-          <p>Recommended listing price. Confidence band. Trend signal — rising, flat, or declining. And the reasoning behind each component, readable without a data background.</p>
+          <p>Recommended price. Probability of 30-day clearance. And the reasoning behind each component, readable without a data background.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ── ABOUT / ETHOS ── -->
-  <section id="about">
-    <div class="container">
-      <p class="label">About</p>
-      <h2 class="reveal">HANA HASANOVIC</h2>
-      <div class="cred-block reveal">
-        <p class="cred-line">B.S. Mechanical Engineering · Ross School of Business (minor) · University of Michigan, Class of 2028</p>
-        <p class="cred-line">Seven years building in Python, JavaScript, C++, and MATLAB · builds end to end</p>
-        <p class="intent-line">I'm interested in applied ML applied to domain-specific pricing problems — markets where the data is messy, the signals are non-obvious, and the cost of getting it wrong is measurable. I'm currently looking for roles at the intersection of engineering and product in fashion tech and adjacent verticals. If Kairos is relevant to something you're building, I'd like to hear about it.</p>
-      </div>
-      <div class="about-links reveal">
-        <a href="https://github.com/hasnaoh" target="_blank" rel="noopener" class="about-link">GitHub</a>
-        <a href="https://www.linkedin.com/in/hana-hasanovic" target="_blank" rel="noopener" class="about-link">LinkedIn</a>
-        <a href="https://github.com/hasnaoh" target="_blank" rel="noopener" class="about-link">Kairos on GitHub</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ── STATUS ── -->
-  <section id="status">
-    <div class="container">
-      <p class="label">Current Status</p>
-      <h2 class="reveal">V1 PROTOTYPE — IN DEVELOPMENT</h2>
-      <p class="status-note reveal">This is a portfolio project. Not a company. Not in market.</p>
-      <div class="status-cols reveal">
-        <div class="status-col">
-          <h3>Done</h3>
-          <ul class="status-list">
-            <li><span class="dot dot-done"></span><span>AI parsing layer — structured feature extraction from natural language item descriptions</span></li>
-            <li><span class="dot dot-done"></span><span>Feature engineering pipeline — brand tier, condition score, archive score, accessories flag</span></li>
-            <li><span class="dot dot-done"></span><span>Regression prototype with quantile confidence bands</span></li>
-            <li><span class="dot dot-done"></span><span>Real-time search trend integration with 2-week lag signal calculation</span></li>
-            <li><span class="dot dot-done"></span><span>API backend scaffolding with pricing endpoint</span></li>
-          </ul>
-        </div>
-        <div class="status-col">
-          <h3>Roadmap</h3>
-          <ul class="status-list">
-            <li><span class="dot dot-road"></span><span>Training dataset curation — historical resale transactions with verified sold prices</span></li>
-            <li><span class="dot dot-road"></span><span>Model validation against holdout set — confirm improvement over median baseline</span></li>
-            <li><span class="dot dot-road"></span><span>Frontend for item input and pricing output display</span></li>
-            <li><span class="dot dot-road"></span><span>Rationale output layer — human-readable explanation per price component</span></li>
-            <li><span class="dot dot-road"></span><span>Demo environment with anonymized sample data</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- ── FOLLOW ── -->
   <section id="follow">
     <div class="container">
       <p class="label">Follow the Project</p>
       <div class="follow-inner reveal">
-        <h2>UPDATES AS THE MODEL IMPROVES</h2>
-        <p class="follow-sub">Occasional notes on what's been built, what broke, and what's next. Not a newsletter.</p>
+        <h2>UPDATES AS kairos IMPROVES</h2>
+        <p class="follow-sub">Occasional notes on what's been built, what broke, and what's next. Not a newsletter. No spam.</p>
         <form class="email-form" id="emailForm" action="https://formspree.io/f/xjglyroj" method="POST">
           <input type="email" name="email" placeholder="your@email.com" required autocomplete="email" />
           <button type="submit" id="submitBtn">Follow</button>
